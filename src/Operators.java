@@ -76,4 +76,5 @@ void main() {
     // incorrectly.
     double avg = (2 + 5 + 4)/3.0;
     System.out.println("The average is " + avg);
+    System.out.println("This is a test");
 }
