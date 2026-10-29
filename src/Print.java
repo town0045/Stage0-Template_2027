@@ -5,8 +5,8 @@
  */
 
 void main() {
-    // Print "Hello World!", with a newline at the end.
-
+    //Print "Hello World!", with a newline at the end.
+    System.out.print("Hello World");
 
     // Print the following lines, each with a separate `println()` statement:
     // The robot knows where it is at all times.
