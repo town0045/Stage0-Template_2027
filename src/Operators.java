@@ -75,5 +75,5 @@ void main() {
     // "truncation", and it often results in a loss of information if handled
     // incorrectly.
     double avg = (2 + 5 + 4)/3.0;
-    System.out.println(avg);
+    System.out.println("The average is " + avg);
 }
