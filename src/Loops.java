@@ -21,8 +21,12 @@ void main() {
     // Below, create a while loop that checks if calibrationTime is less than 5
     // if that is true, print "Calibrating", then increase calibrationTime by one
     // when calibrationTime is no longer less than 5, print "Done!"
-    int calibrationTime;
-
+    int calibrationTime = 0;
+    while (calibrationTime < 5) {
+        System.out.println("Calibrating");
+        calibrationTime++;
+    }
+    System.out.println("Done!");
 
 
 
@@ -35,7 +39,11 @@ void main() {
     // Inside the for loop, include a print statement that prints "time left "
     // and the variable `timer`
 
-
+    int timer = 15;
+    while(timer >= 0) {
+        timer--;
+        System.out.println("Time left " + timer);
+    }
 
 
 
@@ -46,6 +54,16 @@ void main() {
     // Inside the for loop, have an if statement that checks if `timer`
     // is less than or equal to 0. If so, set the drivetrain speed to 0
     // If the `timer` is less than or equal to 15, set the speed to one
-
+    timer = 15;
+    while (timer >= 0){
+        timer--;
+        if (timer >= 0) {
+            drivetrain.setThrottle(0);
+        } else if (timer <= 15) {
+            drivetrain.setThrottle(1);
+        } else {
+            drivetrain.setThrottle(timer);
+        }
+    }
 
 }
