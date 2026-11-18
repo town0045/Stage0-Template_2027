@@ -11,10 +11,11 @@
 // field `ORIGIN`, of type `Point`, and assign to it a new `Point` instance
 // with x = 0 and y = 0.
 
-public class Point{
+class Point{
     private final double x;
     private final double y;
-
+    public final Point ORIGIN = new Point(0, 0);
+    
     public Point(double x, double y){
         this.x = x;
         this.y = y;
@@ -28,9 +29,20 @@ public class Point{
         return this.y;
     }
     
+    public Point plus(Point other) {
+        return new Point (this.x + other.x, this.y + other.y);
+    }
 
+    public Point minus(Point other) {
+        return new Point (this.x - other.x, this.y - other.y);
+    }
+    
+    public double norm(){
+        double sumOfSquares = this.x * this.x + this.y * this.y;
+        return Math.sqrt(sumOfSquares);
+    }
 }
-final Point ORIGIN = new Point(0, 0);
+
     
 void main() {
     // Create two `Point` objects: one representing the point (2, 5) and stored
